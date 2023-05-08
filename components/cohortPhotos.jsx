@@ -2,26 +2,26 @@ const products = [
     {
       id: 1,
       name: 'Basic Tee',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
+      imageSrc: '/images/photo_001.jpg',
+      imageAlt: "Class session with students and a teacher.",
     },
     {
       id: 2,
       name: 'Basic Tee',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
+      imageSrc: 'images/photo_002.jpg',
+      imageAlt: "A smiling student in front of a laptop.",
     },
     {
       id: 3,
       name: 'Basic Tee',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
+      imageSrc: 'images/photo_003.jpg',
+      imageAlt: "Most students in one picture",
     },
     {
       id: 4,
       name: 'Basic Tee',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
+      imageSrc: 'images/photo_004.jpg',
+      imageAlt: "Students with their certificate of accomplishment.",
     },
     // More products...
   ]
@@ -40,6 +40,8 @@ const products = [
                 <div className="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                   <img
                     src={product.imageSrc}
+                    width={500}
+                    height={500}
                     alt={product.imageAlt}
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                   />

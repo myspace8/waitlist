@@ -1,7 +1,6 @@
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,
-  FingerPrintIcon,
   LockClosedIcon,
 } from '@heroicons/react/24/outline';
 
@@ -9,7 +8,7 @@ const features = [
   {
     name: 'Web Development',
     description:
-      "You don't just learn HTML, CSS and JavaScript. We push beyond those boundaries and teach the latest, industry-driven web technologies like React, Next.js, Vue.js, Node.js, Express.js, MongoDB.",
+      "We don't just teach you to build web apps with HTML, CSS and JavaScript. We push beyond those boundaries and teach the latest, industry-driven web technologies like React, Next.js, Vue.js, firebase.",
     icon: CloudArrowUpIcon,
   },
   {
@@ -21,15 +20,15 @@ const features = [
   {
     name: 'Mobile App Development',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra egetf.',
     icon: ArrowPathIcon,
   },
-  {
-    name: 'Cybersecurity',
-    description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-    icon: FingerPrintIcon,
-  },
+  // {
+  //   name: 'Cybersecurity',
+  //   description:
+  //     'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+  //   icon: FingerPrintIcon,
+  // },
 ];
 
 export default function Hero() {
@@ -75,9 +74,9 @@ export default function Hero() {
               </p> */}
               <h1 className="mt-2 text-3xl font-bold text-center md:text-left tracking-tight text-gray-900 sm:text-4xl">
                 We teach, train and empower every student to do more with
-                computers.
+                computers
               </h1>
-              <p className="mt-6 text-xl text-center md:text-left leading-8 text-gray-700">
+              <p className="mt-6 text-lg md:text-xl text-center md:text-left leading-8 text-gray-700">
                 Get to know computers as not just a machine for performing
                 tasks, but also as a tool for creative expression,
                 communication, learning, and innovation.
@@ -88,7 +87,9 @@ export default function Hero() {
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            width={500}
+            height={500}
+            src="/images/photo_002.jpg"
             alt=""
           />
         </div>

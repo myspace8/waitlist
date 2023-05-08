@@ -38,11 +38,13 @@ export default function Testimonial() {
             </p>
           </blockquote>
           <figcaption className="mt-10">
-            <img
-              className="mx-auto h-14 w-14 rounded-full"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
-            />
+            {/* <img
+              className="mx-auto h-14 w-14 rounded-full bg-gray-800"
+              width={12}
+              height={12}
+              src=""
+              alt="A smiling student"
+            /> */}
             <div className="mt-4 flex items-center justify-center mb-6 lg:mb-0 space-x-3 text-base">
               <div className="font-semibold text-gray-900">Beulah</div>
               <svg
