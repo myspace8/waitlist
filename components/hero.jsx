@@ -20,15 +20,9 @@ const features = [
   {
     name: 'Mobile App Development',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra egetf.',
+    "Mobile app development is a rapidly growing field, and with the continued proliferation of smartphones and other mobile devices, it's more important than ever to learn the skills needed to create innovative, user-friendly mobile applications.",
     icon: ArrowPathIcon,
   },
-  // {
-  //   name: 'Cybersecurity',
-  //   description:
-  //     'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-  //   icon: FingerPrintIcon,
-  // },
 ];
 
 export default function Hero() {

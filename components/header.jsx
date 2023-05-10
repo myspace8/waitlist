@@ -1,12 +1,13 @@
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link'
 
 const navigation = [
-  { name: 'Join us', href: '#', focus: 'true' },
-  { name: 'Blog', href: '#' },
-  { name: 'About Us', href: '#' },
-  { name: 'Contact Us', href: '#' },
+  { name: 'Bootcamp', href: '#', focus: 'true' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Contact Us', href: '/contact' },
 ];
 
 function classNames(...classes) {
@@ -32,20 +33,20 @@ export default function Header() {
                 </Disclosure.Button>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div>Logo</div>
+                <Link href={'/'}>Logo</Link>
               </div>
               <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
                           item.focus
                             ? 'rounded-md  bg-red-400 text-white'
                             : 'text-gray-800 hover:text-gray-600',
-                          'px-3 py-2 text-sm text-base'
+                          'px-3 py-2 text-base'
                         )}
                         // className={
                         //   'text-gray-800 hover:text-gray-600 block px-3 py-2 text-base'
@@ -53,7 +54,7 @@ export default function Header() {
                         aria-current={item.focus ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -72,7 +73,7 @@ export default function Header() {
                     item.focus
                       ? 'rounded-md w-full flex items-center justify-center  bg-red-400 text-white'
                       : 'text-gray-800 hover:text-gray-600',
-                    'px-3 py-2 text-sm text-base'
+                    'px-3 py-2 text-base'
                   )}
                   aria-current={item.focus ? 'page' : undefined}
                 >
