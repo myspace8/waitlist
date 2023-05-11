@@ -33,7 +33,7 @@ export default function Footer() {
               color="blue-gray"
               className="font-normal transition-colors hover:text-gray-400 focus:text-gray-500"
             >
-              WhatsApp
+              LinkedIn
             </Typography>
           </li>
           <li>
@@ -43,14 +43,14 @@ export default function Footer() {
               color="blue-gray"
               className="font-normal transition-colors hover:text-gray-400 focus:text-gray-500"
             >
-              +233 592 00 0000
+              +233 542 00 0000
             </Typography>
           </li>
         </ul>
       </div>
       <hr className="my-8 border-gray-400" />
       <Typography color="blue-gray" className="text-center text-sm font-light">
-        &copy; 2023 Bismuth Institute of Technology
+        &copy; 2023 Bismuth Institute of Technology. All rights reserved.
       </Typography>
     </footer>
   );
