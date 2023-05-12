@@ -37,7 +37,7 @@ export default function Contact() {
           Contact Us
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          We will be happy to here from you. Ask any question you may have.
+          Are you the head of an educational institution or an individual. Please submit your information below and ask any question you may have in the message box.
         </p>
       </div>
       <form

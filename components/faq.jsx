@@ -5,12 +5,16 @@ export default function Faq() {
   return (
     <div className="w-full px-4 pt-16">
       <div className="mx-auto max-w-2xl sm:text-center mb-6">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">How we work</h2>
+          {/* <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Frequently Asked Questions</h2> */}
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Everything you need to know
+            Application and payment procedures will go here... 
           </p>
+          {/* <p className="mt-2 text-lg leading-8 text-gray-600">
+            Everything you need to know
+          </p> */}
         </div>
-      <div className="mx-auto w-full max-w-2xl rounded-2xl bg-white p-2">
+      {/* <div className="mx-auto w-full max-w-2xl rounded-2xl bg-white p-2">
         <Disclosure>
           {({ open }) => (
             <>
@@ -80,7 +84,7 @@ export default function Faq() {
             </>
           )}
         </Disclosure>
-      </div>
+      </div> */}
     </div>
   )
 }
