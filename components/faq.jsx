@@ -11,7 +11,7 @@ export default function Faq() {
             Application and payment procedures will go here... 
           </p>
         </div>
-      <div className="mx-auto w-full max-w-2xl rounded-2xl bg-white p-2">
+      {/* <div className="mx-auto w-full max-w-2xl rounded-2xl bg-white p-2">
         <Disclosure>
           {({ open }) => (
             <>
@@ -100,7 +100,7 @@ export default function Faq() {
             </>
           )}
         </Disclosure>
-      </div> 
+      </div>  */}
     </div>
   );
 }
