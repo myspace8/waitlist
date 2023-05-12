@@ -100,7 +100,7 @@ export default function Faq() {
             </>
           )}
         </Disclosure>
-      </div> */}
+      </div> 
     </div>
   );
 }
