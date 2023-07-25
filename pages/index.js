@@ -15,7 +15,7 @@ export default function Home() {
   const [phone, setPhone] = useState('');
   const [submitted, setSubmited] = useState(false);
 
-  const contactRef = collection(db, 'waitlist');
+  // const contactRef = collection(db, 'waitlist');
 
   const onSubmitContact = async (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ export default function Home() {
         <meta name="description" content="Waitlist" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <style>{`body { overflow: hidden; }`}</style>
+        {/* <style>{`body { overflow: hidden; }`}</style> */}
       </Head>
       <>
         <div>{/* <Header /> */}</div>
@@ -53,7 +53,7 @@ export default function Home() {
               "url('https://images.nationalgeographic.org/image/upload/v1638890315/EducationHub/photos/amazon-river-basin.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            height: '100vh',
+            height: '100%',
           }}
         >
           <div
