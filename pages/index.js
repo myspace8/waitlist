@@ -3,8 +3,8 @@ import Head from 'next/head';
 // import { Inter } from 'next/font/google';
 import { useState, useEffect } from 'react';
 // import { Input } from "@/components/ui/input"
-// import { db } from "@/firebase/config"
-// import { collection, addDoc } from "firebase/firestore"
+// import { db } from '@/firebase/config';
+// import { collection, addDoc } from 'firebase/firestore';
 
 import { db } from '../config/firebase';
 import { collection, addDoc } from 'firebase/firestore';
@@ -15,7 +15,7 @@ export default function Home() {
   const [phone, setPhone] = useState('');
   const [submitted, setSubmited] = useState(false);
 
-  // const contactRef = collection(db, 'waitlist');
+  const contactRef = collection(db, 'waitlist');
 
   const onSubmitContact = async (e) => {
     e.preventDefault();
@@ -53,7 +53,7 @@ export default function Home() {
               "url('https://images.nationalgeographic.org/image/upload/v1638890315/EducationHub/photos/amazon-river-basin.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            height: '100%',
+            height: '100vh',
           }}
         >
           <div
@@ -133,32 +133,6 @@ export default function Home() {
             }}
           ></div>
         </main>
-
-        {/* <div className="mt-8 py-2 hidden">
-            <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" className="w-screen bg-transparent rounded-none absolute bottom-0 text-">Explore our products</Button>
-          </SheetTrigger>
-          <SheetContent side='bottom' className="h-[80vh]">
-            <SheetHeader>
-              <SheetTitle>Edit profile</SheetTitle>
-              <SheetDescription>
-                Make changes to your profile here. Click save when you're done.
-              </SheetDescription>
-            </SheetHeader>
-            <Tabs defaultValue="account" className="w-[400px]">
-              <TabsList className="">
-                <div className="w-fu fle justify-center">
-                  <TabsTrigger value="account">Account</TabsTrigger>
-                  <TabsTrigger value="password">Password</TabsTrigger>
-                </div>
-              </TabsList>
-              <TabsContent value="account"  className="text-black">Make changes to your account here.</TabsContent>
-              <TabsContent value="password" className="text-black">Change your password here.</TabsContent>
-            </Tabs>
-          </SheetContent>
-        </Sheet>
-        </div> */}
       </>
     </>
   );
