@@ -22,7 +22,7 @@ export default function Home() {
   });
 
   const calculateTimeLeft = () => {
-    const eventDate = new Date("2023-07-30"); // Replace this with your target date
+    const eventDate = new Date('2023-07-30'); // Replace this with your target date
     const now = new Date();
     const difference = eventDate - now;
 
@@ -84,9 +84,10 @@ export default function Home() {
             height: '100vh',
           }}
         >
-          <h1 className="text-xs text-white absolute top-0 font-bold mt-1 p-1 max-w-[210px]">
-              Amazon Rainforest: <br /> Houses around 390 billion individual trees, representing over 16,000 different species.
-            </h1>
+          <h1 className="text-xs text-gray-400 z-50 absolute top-0 font-bold mt-1 p-1 max-w-[210px]">
+            Amazon Rainforest: <br /> Houses around 390 billion individual
+            trees, representing over 16,000 different species.
+          </h1>
           <div
             className="z-50 w-[300px] md:w-[400px]"
             style={{
@@ -99,18 +100,22 @@ export default function Home() {
             }}
           >
             <h1 className="text-sm text- border- mb-3  font-bld">
-            We are building platform that houses the largest footwear collections in Ghana with everyday offers up to 60% OFF discount and a free delivery for early customers.
+              We are building a platform that houses the largest footwear
+              collections in Ghana with everyday offers up to 60% OFF discount
+              and a free delivery for early customers.
             </h1>
             {/* <h1 className="text-sm text- border- mb-3  font-bld">
             With unbelievable discount offers up to 60% OFF and a free delivery for early customers
             </h1>
             <h1 className="text-sm text- border-  font-bld">
             You get the chance to buy the shoe you love and cherish and not “mɛfa no saa”</h1> */}
-            
 
             {!submitted ? (
               <div>
-                <div style={{ fontSize: "24px", marginTop: "20px" }} className="flex gap-3 items-center justify-center">
+                <div
+                  style={{ fontSize: '24px', marginTop: '20px' }}
+                  className="flex gap-3 items-center justify-center"
+                >
                   <div className="flex gap-1 flex-col items-center">
                     <div className="bg--600 rounded-full w-14 h-14 flex justify-center items-center">
                       {timeLeft.hours}
@@ -147,7 +152,6 @@ export default function Home() {
                     />
                   </svg>
                 </div> */}
-
               </div>
             ) : (
               <div>🙏😊</div>
@@ -184,7 +188,7 @@ export default function Home() {
               </div>
             )}
           </div>
-          
+
           <div
             style={{
               position: 'absolute',
@@ -195,9 +199,7 @@ export default function Home() {
               background: 'rgba(0, 0, 0, 0.5)',
             }}
           ></div>
-          
         </main>
-        
       </>
     </>
   );
