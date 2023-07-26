@@ -1,10 +1,12 @@
 import { Typography } from '@material-tailwind/react';
+import { Carousel } from './carousel';
 
 export default function Footer() {
   return (
     <footer className="w-full bg-gray-900 text-white p-8">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
-        <div>Logo</div>
+        <div>Veliore</div>
+        <Carousel />
         <ul className="flex flex-wrap justify-center items-center gap-y-2 gap-x-8">
           <li>
             <Typography
