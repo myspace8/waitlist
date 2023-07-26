@@ -15,6 +15,34 @@ export default function Home() {
   const [phone, setPhone] = useState('');
   const [submitted, setSubmited] = useState(false);
 
+  const [timeLeft, setTimeLeft] = useState({
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  const calculateTimeLeft = () => {
+    const eventDate = new Date("2023-07-30"); // Replace this with your target date
+    const now = new Date();
+    const difference = eventDate - now;
+
+    if (difference > 0) {
+      const hours = Math.floor(difference / (1000 * 60 * 60));
+      const minutes = Math.floor((difference / (1000 * 60)) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      setTimeLeft({ hours, minutes, seconds });
+    } else {
+      setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
+    }
+  };
+
+  useEffect(() => {
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const contactRef = collection(db, 'waitlist');
 
   const onSubmitContact = async (e) => {
@@ -56,41 +84,70 @@ export default function Home() {
             height: '100vh',
           }}
         >
+          <h1 className="text-xs text-white absolute top-0 font-bold mt-1 p-1 max-w-[210px]">
+              Amazon Rainforest: <br /> Houses around 390 billion individual trees, representing over 16,000 different species.
+            </h1>
           <div
-            className="z-50"
+            className="z-50 w-[300px] md:w-[400px]"
             style={{
-              position: 'absolute',
+              position: 'relative',
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
               textAlign: 'center',
               color: '#fff',
-              width: '300px',
             }}
           >
-            <h1 className="text-sm uppercase font-bld">
-              We are building the largest footwear catalog <br /> in Ghana.
+            <h1 className="text-sm text- border- mb-3  font-bld">
+            We are building platform that houses the largest footwear collections in Ghana with everyday offers up to 60% OFF discount and a free delivery for early customers.
             </h1>
-            <h1 className="text-xl uppercase font-bold my-2">
-              Enjoy 30% discount on your first purchase.
+            {/* <h1 className="text-sm text- border- mb-3  font-bld">
+            With unbelievable discount offers up to 60% OFF and a free delivery for early customers
             </h1>
+            <h1 className="text-sm text- border-  font-bld">
+            You get the chance to buy the shoe you love and cherish and not “mɛfa no saa”</h1> */}
+            
 
             {!submitted ? (
-              <div className="animate-bounce flex justify-center w-full mt-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
+              <div>
+                <div style={{ fontSize: "24px", marginTop: "20px" }} className="flex gap-3 items-center justify-center">
+                  <div className="flex gap-1 flex-col items-center">
+                    <div className="bg--600 rounded-full w-14 h-14 flex justify-center items-center">
+                      {timeLeft.hours}
+                    </div>
+                    <p className="text-xs">Hours</p>
+                  </div>
+                  <div className="flex gap-1 flex-col items-center">
+                    <div className="bg--600 rounded-full w-14 h-14 flex justify-center items-center">
+                      {timeLeft.minutes}
+                    </div>
+                    <p className="text-xs">Minutes</p>
+                  </div>
+                  <div className="flex gap-1 flex-col items-center">
+                    <div className="bg--600 rounded-full w-14 h-14 flex justify-center items-center">
+                      {timeLeft.seconds}
+                    </div>
+                    <p className="text-xs">Seconds</p>
+                  </div>
+                </div>
+                {/* <div className="animate-bounce flex justify-center w-full mt-4">
+                  
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div> */}
+
               </div>
             ) : (
               <div>🙏😊</div>
@@ -111,10 +168,15 @@ export default function Home() {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white p-2 capitalize text-sm font-medium mt-2 "
+                  className="w-full bg-blue-600 text-white py-3 capitalize text-sm font-medium mt-2 "
                 >
                   Get early access
                 </button>
+                {/* <div className='mt-12'>
+                  <button className='text-sm underline-offset-4 underline'> 
+                  What is 60% OFF discount?
+                  </button>
+                </div> */}
               </form>
             ) : (
               <div>
@@ -122,17 +184,20 @@ export default function Home() {
               </div>
             )}
           </div>
+          
           <div
             style={{
               position: 'absolute',
-              top: 48,
+              top: 0,
               left: 0,
               width: '100%',
-              height: '1000px',
+              height: '100%',
               background: 'rgba(0, 0, 0, 0.5)',
             }}
           ></div>
+          
         </main>
+        
       </>
     </>
   );

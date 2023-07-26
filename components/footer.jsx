@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
       <hr className="my-8 border-gray-400" />
       <Typography color="blue-gray" className="text-center text-sm font-light">
-        &copy; 2023 Bismuth Institute of Technology. All rights reserved.
+        &copy; 2023 Veliore. All rights reserved.
       </Typography>
     </footer>
   );
