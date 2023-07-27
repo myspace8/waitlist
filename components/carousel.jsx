@@ -1,3 +1,7 @@
+import { db } from "../config/firebase";
+import { collection, getDocs } from "firebase/firestore";
+
+
 export function Carousel() {
   return (
     <div className=" w-full overflow-x-auto pb-6 pt-1">

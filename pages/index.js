@@ -1,15 +1,12 @@
-// import Header from '@/components/header';
 import Head from 'next/head';
-// import { Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import { useState, useEffect } from 'react';
-// import { Input } from "@/components/ui/input"
-// import { db } from '@/firebase/config';
-// import { collection, addDoc } from 'firebase/firestore';
 
 import { db } from '../config/firebase';
 import { collection, addDoc } from 'firebase/firestore';
+import Footer from '../components/footer';
 
-// const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const [phone, setPhone] = useState('');
@@ -69,13 +66,10 @@ export default function Home() {
         <meta name="description" content="Waitlist" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {/* <style>{`body { overflow: hidden; }`}</style> */}
       </Head>
       <>
-        <div>{/* <Header /> */}</div>
-
         <main
-          // className={inter.className}
+          className={inter.className}
           style={{
             backgroundImage:
               "url('https://images.nationalgeographic.org/image/upload/v1638890315/EducationHub/photos/amazon-river-basin.jpg')",
@@ -104,12 +98,6 @@ export default function Home() {
               collections in Ghana with everyday offers up to 60% OFF discount
               and a free delivery for early customers.
             </h1>
-            {/* <h1 className="text-sm text- border- mb-3  font-bld">
-            With unbelievable discount offers up to 60% OFF and a free delivery for early customers
-            </h1>
-            <h1 className="text-sm text- border-  font-bld">
-            You get the chance to buy the shoe you love and cherish and not “mɛfa no saa”</h1> */}
-
             {!submitted ? (
               <div>
                 <div
@@ -200,6 +188,7 @@ export default function Home() {
             }}
           ></div>
         </main>
+          <Footer />
       </>
     </>
   );
