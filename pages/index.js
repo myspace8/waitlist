@@ -164,11 +164,6 @@ export default function Home() {
                 >
                   Get early access
                 </button>
-                {/* <div className='mt-12'>
-                  <button className='text-sm underline-offset-4 underline'> 
-                  What is 60% OFF discount?
-                  </button>
-                </div> */}
               </form>
             ) : (
               <div>
@@ -188,28 +183,8 @@ export default function Home() {
             }}
           ></div>
         </main>
-          <Footer />
+        <Footer />
       </>
     </>
   );
 }
-
-// import Certification from "../components/certification";
-// import Gallery from "../components/cohortPhotos";
-// import Faq from "../components/faq";
-// import Hero from "../components/hero";
-// import Subscribe from "../components/subscribe";
-// import Testimonial from "../components/testimonials";
-
-// export default function Home() {
-//   return (
-//     <>
-//       <Hero />
-//       <Testimonial />
-//       <Gallery />
-//       <Faq />
-//       <Certification />
-//       <Subscribe />
-//     </>
-//   );
-// }

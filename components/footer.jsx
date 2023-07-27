@@ -1,13 +1,14 @@
 import { Typography } from '@material-tailwind/react';
 import { Carousel } from './carousel';
+import { useState } from 'react';
 
 export default function Footer() {
+
   return (
     <footer className="w-full bg-gray-900 text-white p-8">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
-        <div>Veliore</div>
         <Carousel />
-        <ul className="flex flex-wrap justify-center items-center gap-y-2 gap-x-8">
+        {/* <ul className="flex flex-wrap justify-center items-center gap-y-2 gap-x-8">
           <li>
             <Typography
               as="a"
@@ -48,7 +49,7 @@ export default function Footer() {
               +233 542 00 0000
             </Typography>
           </li>
-        </ul>
+        </ul> */}
       </div>
       <hr className="my-8 border-gray-400" />
       <Typography color="blue-gray" className="text-center text-sm font-light">

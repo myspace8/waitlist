@@ -18,9 +18,13 @@ module.exports = {
           from: { opacity: 0 },
           to: { opacity: 1 },
         },
-        marquee: {
+        leftToRight: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        RightToLeft: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
         blink: {
           '0%': { opacity: 0.2 },
@@ -30,7 +34,8 @@ module.exports = {
       },
       animation: {
         fadeIn: 'fadeIn .3s ease-in-out',
-        carousel: 'marquee 20s linear infinite',
+        carouselL2R: 'leftToRight 20s linear infinite',
+        carouselR2L: 'RightToLeft 20s linear infinite',
         blink: 'blink 1.4s both infinite',
       },
     },
